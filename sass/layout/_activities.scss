@@ -1,12 +1,12 @@
 .activities {
   display: none;
   @include width(1200) {
-    display: contents;
+    display: block;
   }
 }
 .activities__activities-position {
   padding-top: 0px !important;
-}
+}  
 .activities__item {
     position: relative;
     &:not(:last-child) {

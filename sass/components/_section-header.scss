@@ -1,9 +1,10 @@
 .section-header {
-    @include font(normal, 700, 36px, 42px, 0.03em, var(--header-text-color));
+    @include font(normal, 700, 28px, 1.17, 0.03em, var(--header-text-color));
     text-align: center;
     margin: 0 0 30px 0;
     padding: 0;
       @include width(1200) {
+        @include font(normal, 700, 36px, 1.17, 0.03em, var(--header-text-color));
         margin: 0 0 50px 0;
       }
     }

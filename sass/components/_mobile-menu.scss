@@ -98,7 +98,7 @@
         opacity: 1;
       }
 }
-.mobile-menu__link_active {
+/* .mobile-menu__link_active {
     position: relative;
     @include font(normal, 500, 40px, 1.15, 0.02em, var(--accent-color));
     &::after, &:hover::after, &:focus:after {
@@ -112,7 +112,7 @@
         border-radius: 2px;
         opacity: 1;
     }
-} 
+}  */
 .mobile-menu__contacts {
     display: flex;
     flex-direction: column;
