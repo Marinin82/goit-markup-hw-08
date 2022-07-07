@@ -1,0 +1,98 @@
+.tiles {
+  @include width(768) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; 
+    margin: -15px;
+  }
+  @include width(1200) { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center; 
+    margin: -15px;
+  }
+}
+  .tiles__link {
+    text-decoration: none;
+  }
+  .tiles__item {
+    margin: 15px 0 15px;
+    &:first-child {
+     margin-top: 0;
+   } 
+   &:last-child {
+     margin-bottom: 0;
+   }
+   @include width(768) {
+     flex-basis: calc((100% - 60px) / 2 );
+     margin: 15px;
+     &:first-child {
+       margin-top: -20px;
+     }  
+     &:last-child {
+       margin-bottom: 0;
+     }
+   }
+    @include width(1200) {
+      flex-basis: calc(100% / 3 - var(--card-set-gap));
+      margin: 15px;
+      &:first-child {
+        margin-top: 15px;
+      }  
+      &:last-child {
+        margin-bottom: 15px;
+      }
+    }
+    &:hover, &:focus {
+      box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+                  0px 4px 4px 0px rgba(0, 0, 0, 0.06),
+                  0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  }
+}
+  .tiles__item_popup {
+      overflow: hidden;
+      position: relative;
+  }
+  /*.tiles__item_popup::before {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(33, 150, 243, 0.9);
+      transform: translateY(101%);
+      transition: transform var(--timing-function);
+  }*/
+  .tiles__item-toptext {
+      @include font(normal, 400, 18px, 1.56, 0.03em, #ffff);
+      position: absolute;
+      top: 0;
+      width: 101%;
+      height: 100%;
+      padding: 63px 24px;
+      margin: 0;
+      background-color: rgba(33, 150, 243, 0.9);
+      transform: translateY(101%);
+      transition: transform var(--timing-function);
+      overflow: auto;
+      .tiles__item:hover & {
+        transform: translateY(0);
+    }
+  }
+  .tiles__content-position {
+    padding: 20px 24px;
+  }
+  .tiles__title {
+    @include font(normal, 700, 18px, 2, 0.06em, var(--header-text-color));
+    text-decoration: none;
+    margin: 0;
+  }
+  .tiles__text {
+    @include font(normal, 400, 16px, 1.88, 0.03em, var(--line-text-color));
+    text-decoration: none;
+    margin: 0;
+  }
